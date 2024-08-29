@@ -49,7 +49,7 @@ const useHandleSubmitMessage = ({
         console.log("inputref", inputRef?.current);
         setTimeout(() => {
           inputRef?.current!.focus();
-        }, 100);
+        }, 200);
       }, 500);
       setShowAutoComplete(false);
     }
