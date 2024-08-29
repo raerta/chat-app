@@ -1,11 +1,7 @@
 import { useCallback } from "react";
 import { useChatContext } from "@/context/chatContext";
 
-const useHandleSubmitMessage = ({
-  inputRef,
-}: {
-  inputRef?: React.RefObject<HTMLInputElement | undefined>;
-}) => {
+const useHandleSubmitMessage = () => {
   const {
     messages,
     setMessages,
@@ -46,10 +42,6 @@ const useHandleSubmitMessage = ({
         }
         setLoading(false);
         setInputValue("");
-        console.log("inputref", inputRef?.current);
-        setTimeout(() => {
-          inputRef?.current!.focus();
-        }, 200);
       }, 500);
       setShowAutoComplete(false);
     }

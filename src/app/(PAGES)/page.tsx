@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import styled from "@emotion/styled";
 import SendButton from "@/components/SendButton";
 import useHandleSubmitMessage from "@/hooks/useHandleSubmitMessage";
@@ -44,16 +44,24 @@ const ComboBox = styled.select`
 `;
 
 const Chat = () => {
-  const { showAutoComplete, showComboBox } = useChatContext();
+  const { showAutoComplete, showComboBox, loading } = useChatContext();
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   const { handleSubmitMessage, handleSelectOption, handleAutoCompleteClick } =
-    useHandleSubmitMessage({ inputRef });
+    useHandleSubmitMessage();
 
   const handleSelect = (option: string) => {
     handleSelectOption(option);
     inputRef.current?.focus();
   };
+
+  useEffect(() => {
+    if (!loading) {
+      inputRef.current?.focus();
+    }
+
+    return () => {};
+  }, [loading]);
 
   return (
     <ChatContainer>
