@@ -28,6 +28,15 @@ When a user types "/image" followed by a number (e.g., "/image 3"), display a pl
 
 If we want an error for this app, we could type string instead a number.
 
+## Used Libraries
+
+"@emotion/react": "^11.13.3",
+"@emotion/styled": "^11.13.0",
+"tailwindcss": "^3.4.1",
+"@testing-library/jest-dom": "^6.5.0",
+"@testing-library/react": "^16.0.1",
+"@testing-library/user-event": "^14.5.2",
+"@types/jest":
 
 ## Live App
 
