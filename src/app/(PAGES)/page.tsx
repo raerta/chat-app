@@ -44,12 +44,11 @@ const ComboBox = styled.select`
 `;
 
 const Chat = () => {
-  const { showAutoComplete, showComboBox, error } = useChatContext();
+  const { showAutoComplete, showComboBox } = useChatContext();
+  const inputRef = useRef<HTMLInputElement | null>(null);
 
   const { handleSubmitMessage, handleSelectOption, handleAutoCompleteClick } =
-    useHandleSubmitMessage();
-
-  const inputRef = useRef<HTMLInputElement | null>(null);
+    useHandleSubmitMessage({ inputRef });
 
   const handleSelect = (option: string) => {
     handleSelectOption(option);

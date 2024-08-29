@@ -1,7 +1,11 @@
 import { useCallback } from "react";
 import { useChatContext } from "@/context/chatContext";
 
-const useHandleSubmitMessage = () => {
+const useHandleSubmitMessage = ({
+  inputRef,
+}: {
+  inputRef?: React.RefObject<HTMLInputElement | undefined>;
+}) => {
   const {
     messages,
     setMessages,
@@ -41,8 +45,12 @@ const useHandleSubmitMessage = () => {
           setMessages([...messages, { text: messageText, isUser: true }]);
         }
         setLoading(false);
+        setInputValue("");
+        console.log("inputref", inputRef?.current);
+        setTimeout(() => {
+          inputRef?.current!.focus();
+        }, 100);
       }, 500);
-      setInputValue("");
       setShowAutoComplete(false);
     }
   };

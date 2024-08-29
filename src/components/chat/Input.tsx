@@ -50,7 +50,7 @@ const Input = ({
     }
   };
 
-  const { handleSubmitMessage } = useHandleSubmitMessage();
+  const { handleSubmitMessage } = useHandleSubmitMessage({});
 
   const onEnterPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if ((e.key === "Enter" || e.code === "Enter") && !e.shiftKey) {
