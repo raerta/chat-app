@@ -25,7 +25,11 @@ npm run test
 
 ## Learn More
 
+When a user types "/select", display a combo box with at least 5 options.
+
 When a user types "/image" followed by a number (e.g., "/image 3"), display a placeholder image.
+
+If we want an error for this app, we could type string instead a number. 
 
 
 ## Deploy on Vercel
