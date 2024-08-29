@@ -13,7 +13,7 @@ const ChatContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  height: 100svh;
   margin: 0 auto;
   border: 1px solid #ccc;
   border-radius: 8px;
