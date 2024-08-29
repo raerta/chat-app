@@ -1,0 +1,22 @@
+export const chatPhrases = [
+    "Hello!",
+    "How are you?",
+    "What's up?",
+    "Thank you!",
+    "You're welcome!",
+    "Sorry for the delay.",
+    "No problem.",
+    "Can you help me with this?",
+    "Got it!",
+    "I don't understand.",
+    "Can you explain that?",
+    "Let's meet up later.",
+    "See you soon!",
+    "I agree.",
+    "That's interesting.",
+    "I’m not sure.",
+    "What do you think?",
+    "I’ll check that out.",
+    "Thanks for the update.",
+    "Have a great day!"
+];
